@@ -11,6 +11,27 @@ label{
     color: #54927c;
     font: -webkit-small-control;
 }
+.foo_label {
+    visibility: hidden;
+    margin: 4px 43px;
+}
+.for_email{
+    visibility: hidden;
+    margin: 4px -98px;
+
+}
+.for-phone{
+    visibility: hidden;
+    margin: 4px 0px 7px;
+}
+.for-mobile{
+    visibility: hidden;
+    margin: 5px 120px;
+}
+.for-country{
+    visibility: hidden;
+    margin: 4px 79px;
+}
 #app_RegisterAccount_0{
     position: relative;
     top: -19px;

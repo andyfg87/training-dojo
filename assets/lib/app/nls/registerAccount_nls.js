@@ -10,7 +10,7 @@ define( {root:
                 email_div_text:'*E-Mail ID',
                 emailA_div_text:'Alternative E-Mail ID',
                 phone_div_text:'Your Phone',
-                phone_div_text:'Mobile Phone',
+                phone_mobile_text:'Mobile Phone',
                 address_postal_text:'*Your Postal Adress',
                 country_text:'*Country',
                 password_text:'*Password',

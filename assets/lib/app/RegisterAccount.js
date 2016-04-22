@@ -173,12 +173,41 @@ define([
                 var pass1=dijit.byId("pass-text").get("value");
                 var pass2=dijit.byId("r-pass-text").get("value");
                 console.log(dijit.byId("pass-text").get("value"));
+               
+                if(pass1==pass2 && pass1!=''){
+                    query(".foo_label").style("visibility", "visible");
+                    query(".for_email").style("visibility", "visible");
+                    query("label[for=for_email2]").style("visibility", "visible");
+                    query("label[for=for-phone]").style("visibility", "visible");
+                    query("label[for=for-mobile]").style("visibility", "visible");
+                    query("label[for=for-country]").style("visibility", "visible");
 
-                if(pass1==pass2 && pass1!=''|pass2!=''){
+                    //this._foo.innerHTML=textNew;
                     query(".in-div").forEach(function(value){
                         value.style.visibility="hidden";
                         console.log(value);
                     });
+
+                    var textNew=dijit.byId("name-text").get("value");
+                    query("label[for=for-name]")[0].innerHTML = textNew;
+
+                    var textEmail=dijit.byId("email-text").get("value");
+                    query(".for_email")[0].innerHTML = textEmail;
+
+                    var textEmail2=dijit.byId("alt-email").get("value");
+                    query("label[for=for_email2]")[0].innerHTML = textEmail2;
+
+                    var textCountry=dijit.byId("country-number").get("value");
+                    var textCity=dijit.byId("city-number").get("value");
+                    var textPhone=dijit.byId("phone-number").get("value");
+                    query("label[for=for-phone]")[0].innerHTML = textCountry+"-"+textCity+"-"+textPhone;
+
+                    var textMobile=dijit.byId("mobile-text").get('value');
+                    query("label[for=for-mobile]")[0].innerHTML=textMobile;
+
+                    var textSelectCountry=dijit.byId("country").get("value");
+                    query("label[for=for-country]")[0].innerHTML=textSelectCountry;
+
                     topic.publish("testMessageTopic",
                         {
                             message: "All elements are OK! ",
@@ -201,6 +230,24 @@ define([
             });
             on(this._reset,"click", function(evt){
                 query(".in-div").style("visibility", "visible");
+                query(".foo_label").style("visibility", "hidden");
+                query(".for_email").style("visibility", "hidden");
+                query("label[for=for_email2]").style("visibility", "hidden");
+                query("label[for=for-phone]").style("visibility", "hidden");
+                query("label[for=for-mobile]").style("visibility", "hidden");
+                query("label[for=for-country]").style("visibility", "hidden");
+
+                dijit.byId("name-text").set("value","");
+                dijit.byId("email-text").set("value","");
+                dijit.byId("alt-email").set("value","");
+                dijit.byId("country-number").set("value","");
+                dijit.byId("city-number").set("value","");
+                dijit.byId("phone-number").set("value","");
+                dijit.byId("mobile-text").set('value',"");
+                dijit.byId("country").set("value","");
+                dijit.byId("pass-text").set("value","");
+                dijit.byId("pass-text").set("value","");
+                dijit.byId("r-pass-text").set("value","");
                 console.log(query(".in-div"));
             });
         },
