@@ -1,0 +1,131 @@
+ <div id="main" data-dojo-attach-point="containerNode">
+         <div id="">
+             <header id="head-text"><h3>Register - Create Account</h3></header>
+         </div>
+         <section >
+             <div id="dataForm"  method=""  data-dojo-attach-point="_dataForm"></div>
+             <h4 id="s-head">Fied marked with * are compulsory fields</h4>
+             <div id="r-form">
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.name_div_text}</label></div>
+                     <div class="in-div"><input  id="name-text" name="name-text" type="text"
+                             data-dojo-attach-point="_name" data-dojo-type="dijit/form/ValidationTextBox"
+                             data-dojo-props="value:'',
+                                                 pattern: '\\w+',
+                                                 required:true,
+                                                 promptMessage:this.i18n.name_text.promptMessage,
+                                                 missingMessage:this.i18n.name_text.missingMessage,
+                                                 invalidMessage:this.i18n.name_text.invalidMessage,
+                                                  placeHolder: 'Name'"/>
+                     </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label> ${i18n.email_div_text}</label></div>
+                     <div class="in-div"><input id="email-text" type="text"
+                             data-dojo-attach-point="_email" name="email-text" data-dojo-type="dijit/form/ValidationTextBox"
+                             data-dojo-props="value: '',
+                         required:true,
+                         validator:dojox.validate.isEmailAddress,
+                         promptMessage:this.i18n.email_text.promptMessage,
+                         missingMessage:this.i18n.email_text.missingMessage,
+                         invalidMessage:this.i18n.email_text.invalidMessage,
+                          placeHolder: 'john@domain.com'"/> </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.emailA_div_text}</label></div>
+                     <div class="in-div"><input id="alt-email" type="text"
+                            data-dojo-attach-point="_altEmail" name="alt-email"  data-dojo-type="dijit/form/ValidationTextBox"
+                                                data-dojo-props="value: '',
+                         required:true,
+                         validator:dojox.validate.isEmailAddress,
+                         promptMessage:this.i18n.email_text.promptMessage,
+                         missingMessage:this.i18n.email_text.missingMessage,
+                         invalidMessage:this.i18n.email_text.invalidMessage,
+                          placeHolder: 'john@domain.com',"></div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label" id="n-form-label-id"><label>${i18n.phone_div_text}</label></div>
+                     <div class="in-div">
+                         <div id="inner-div">
+                             <input type="text" id="country-number" name="country-number" data-dojo-attach-point="_country_number"
+                                     data-dojo-type="dijit/form/ValidationTextBox"
+                                    data-dojo-props="required:false,
+                                                        regExp:'\\d{2}',
+                                                        placeHolder: '##',
+                                                        invalidMessage:this.i18n.country_text.rangeMessage  ,
+                                                        invalidMessage:this.i18n.country_text.invalidMessage"/> -
+
+                             <input type="text" id="city-number" name="city-number" data-dojo-attach-point="_city_number"
+                                     data-dojo-type="dijit/form/ValidationTextBox"
+                                     data-dojo-props="required:false,
+                                                        regExp:'\\d{3}',
+                                                        placeHolder: '###',
+                                                        invalidMessage:this.i18n.city_text.invalidMessage"/> -
+
+                             <input type="text" id="phone-number" name="phone-number" data-dojo-attach-point="_phone_number"
+                                     data-dojo-type="dijit/form/ValidationTextBox"
+                                     data-dojo-props=" required:false,
+                                                        regExp:'\\d{2}',
+                                                        placeHolder: '##',
+                                                        invalidMessage:this.i18n.city_text.invalidMessage"/>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.phone_div_text}</label></div>
+                     <div class="in-div"> <input type="text" id="mobile-text" data-dojo-attach-point="_mobile" name="mobile-text"
+                                                 data-dojo-type="dijit/form/ValidationTextBox"
+                                                 data-dojo-props="required:false,
+                                                regExp:'\\d{2}',
+                                                invalidMessage:this.i18n.city_text.invalidMessage,
+                                                 placeHolder: '##'"/></div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.address_postal_text}</label></div>
+                     <div class="in-div"><input type="text" id="address-postal" name="address-postal">
+                     </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.country_text}</label></div>
+                     <div class="in-div">
+                         <select id="country" data-dojo-attach-point="_country_arr" name="country">
+                            <!--<option>---------------------Select One---------------------</option>-->
+                         </select>
+
+                     </div>
+                 </div>
+
+                 <div data-dojo-type="dojox.form.PasswordValidator" name=""password>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.password_text}<label/></div>
+                     <div class="in-div"><input type="password" id="pass-text" name="pass-text" data-dojo-attach-point="_pass_text" pwType="new"></div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label"><label>${i18n.password_confirmation_text}</label></div>
+                     <div class="in-div"><input type="password" id="r-pass-text" name="r-pass-text" data-dojo-attach-point="_r-pass_text" pwType="verify"></div>
+                 </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label-check"></div>
+                     <div class="in-div"><input type="checkbox" id="accept-term" name="accept-term" data-dojo-attach-point="_accept_term"
+                             data-dojo-type="dijit/form/CheckBox" data-dojo-props="required:true" required="true"><div>
+                         <p>I accept the <a href="index.html">Terms of Use</a></p></div>
+                     </div>
+                 </div>
+                 <div class="n-form">
+                     <div class="n-form-label-check"></div>
+                     <div class="in-div2">
+                         <button type="button" id="addBtn" data-dojo-type="dijit/form/Button" data-dojo-attach-point="continue" disabled>${i18n.continue_button}</button>
+                         <button type="button" data-dojo-type="dijit/form/Button" id="reset-button" data-dojo-attach-point="_reset" value="">${i18n.continue_reset}</button>
+                     </div>
+
+                 </div>
+
+             </div>
+         </section>
+     <div data-dojo-type="dojox/widget/Toaster"
+          data-dojo-props="positionDirection:'tl-down', duration:0, messageTopic:'testMessageTopic'"
+          id="publish_subscribe_toaster"
+             >
+     </div>
+     </div>

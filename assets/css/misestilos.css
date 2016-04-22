@@ -1,0 +1,123 @@
+body {
+    text-align: center;
+    padding: 10px ;
+    margin: 20px;
+
+}
+h3{
+    color: #54927c;
+}
+label{
+    color: #54927c;
+    font: -webkit-small-control;
+}
+#app_RegisterAccount_0{
+    position: relative;
+    top: -19px;
+    left: 50px;
+    width: 1219px;
+    overflow-x: auto;
+    background: aliceblue;
+}
+
+#main{
+    /* other color for label #e4f2ec*/
+    background: #d3e9fb;
+    /*margin: 100px 240px;*/
+    width:600px;
+    height: 500px;
+}
+
+#head-text {
+    text-align: left;
+    margin: 10px 300px;
+
+}
+#s-head{
+    border-style: dotted;
+    border-width: thin;
+    background:#e4f2ec ;
+    font: -webkit-small-control;
+}
+#s-head{
+    padding: 6px;
+    margin: 29px 300px;
+    text-align: left;
+}
+ #r-form {
+    padding: 0px;
+    margin: 10px;
+    text-align: left;
+}
+.n-form {
+    margin: 5px 10px;
+    display: inline-flex;
+    padding-left: 281px;
+
+}
+.n-form-label{
+   background:#e4f2ec;
+    width: 150px;
+    text-align: right;
+}
+#n-form-label-id{
+    width: 150px;
+}
+.n-form-label-check{
+    background:aliceblue;
+    width: 150px;
+    text-align: right;
+}
+.in-div{
+    position: relative;
+    margin:1px 15px ;
+    display: inline-flex;
+}
+.in-div2{
+    position: relative;
+    margin:1px 15px ;
+    display: inline-flex;
+}
+.inner-div{
+
+}
+p {
+    font: bold 83% monospace;
+    padding: 3px 6px;
+    margin-top: auto;
+}
+#country-number{
+    width: 10%
+}
+#city-number{
+    width: 10%
+}
+#phone-number{
+    width: 29%
+}
+#name-text, #mobile-text{
+    width: 140%;
+}
+#email-text, #alt-email{
+    width:290px;
+}
+#address-postal{
+    width:260px;
+    height: 50px;
+}
+#reset-button{
+    margin: 0px 10px;
+}
+
+/*witget component*/
+#widget_email-text,#widget_alt-email{
+    width: 378px;
+}
+#widget_country-number,#widget_city-number{
+    width: 60px;
+    height: 22px;
+}
+#widget_phone-number{
+    width: 165px;
+}
+
